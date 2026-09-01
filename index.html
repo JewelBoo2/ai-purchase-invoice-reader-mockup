@@ -6,6 +6,102 @@
   <style>.extraction-result__title{display:flex!important}</style><script>document.addEventListener('DOMContentLoaded',()=>{const moveResult=()=>{const heading=document.querySelector('.azure-extraction-heading'),result=document.querySelector('.extraction-result');if(!heading||!result)return;heading.replaceWith(result)};setTimeout(moveResult,0)});</script><style>
     *{box-sizing:border-box} body{margin:0;background:#eef1f5;color:#344056;font:12px Arial,Helvetica,sans-serif}.app{min-height:100vh;padding:46px 52px;background:linear-gradient(#dfe3e8cc,#dfe3e8cc),repeating-linear-gradient(90deg,#f7f8fa 0 110px,#e6e9ed 111px 112px)}.modal{min-height:720px;background:#fff;border-radius:8px;box-shadow:0 10px 32px #232f3e55;display:flex;flex-direction:column;overflow:hidden}.top{height:48px;padding:17px 18px;border-bottom:1px solid #e7eaf0;font-weight:700;color:#48659b}.x{float:right;color:#697386;font-size:16px;font-weight:400}.content{display:grid;grid-template-columns:1fr 1fr;flex:1;padding:16px}.upload-side{padding-right:8px}.drop{border:1px dashed #3e96ff;height:82px;text-align:center;padding-top:12px;color:#3e5b91;font-weight:600;cursor:pointer}.cloud{font-size:18px;color:#459bff;line-height:19px}.browse{font-weight:400;font-size:11px;margin-top:4px}.preview-title{font-weight:700;color:#4b6190;margin:16px 0 8px}.pdf-preview{height:490px;border:1px solid #d9e0ea;border-radius:5px;background:#f5f7fa;display:flex;align-items:center;justify-content:center;padding:20px}.page{height:100%;width:74%;background:#fff;box-shadow:0 2px 9px #8b98aa55;padding:25px 23px;color:#27364e}.invoice-top{display:flex;justify-content:space-between;border-bottom:2px solid #4594f4;padding-bottom:12px;color:#2d74d5;font-size:19px;font-weight:700}.invoice-top small{font-size:9px;color:#64748b;align-self:flex-end}.pdf-lines{margin-top:22px}.pdf-lines i{display:block;height:7px;border-radius:4px;background:#e6ebf2;margin:10px 0}.pdf-lines i:nth-child(2),.pdf-lines i:nth-child(6){width:55%}.pdf-table{height:108px;margin-top:24px;background:repeating-linear-gradient(0deg,#f3f6fa 0 25px,#dce4ed 26px 27px);border-top:1px solid #cbd5e1}.filebar{display:flex;align-items:center;gap:10px;margin-top:10px;padding:9px 11px;border:1px solid #dce3ec;border-radius:7px;color:#42526b}.pdf-icon{background:#ff637e;color:#fff;padding:5px;border-radius:4px;font-size:10px;font-weight:700}.filename{flex:1;font-weight:700}.file-action{border:0;background:transparent;color:#3688f6;cursor:pointer;font-size:11px}.file-action.remove{color:#e65970}.form{border-left:1px solid #89929f;margin-left:8px;padding-left:8px}.formhead{height:51px;border-bottom:1px solid #9199a4;padding-top:11px;color:#496497;font-weight:700}.save{float:right;margin-top:-8px}.hint{font-size:10px;font-weight:400;color:#4e596b;margin-top:24px}.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:10px 18px;margin-top:13px}.field{min-height:38px;display:grid;grid-template-columns:193px 1fr;align-items:center;gap:8px}.field.full{grid-column:1/-1}.req{color:#ff3d68}.input,.select,.textarea{height:38px;border:1px solid #d8dfe8;border-radius:8px;background:#fff;padding:11px 12px;color:#384357;position:relative}.select:after{content:'⌄';position:absolute;right:11px;color:#6b7a90;font-size:17px;top:7px}.clear{position:absolute;right:32px;color:#c4c9d0}.textarea{height:58px;width:100%;resize:none}.notes .input{height:auto}.money{display:grid;grid-template-columns:32px 1fr;padding:0;overflow:hidden}.prefix{padding:11px 9px;border-right:1px solid #d8dfe8}.money input{border:0;outline:0;min-width:0}.four{display:grid;grid-template-columns:1.05fr 1fr 1fr 1.18fr;gap:13px;margin-top:14px}.four label{font-weight:400}.panel{background:#f1f1f2;margin-top:9px;padding:11px 9px 15px;color:#4b6190;font-weight:700}.vatgrid{display:grid;grid-template-columns:44px 145px 1fr 1fr 1.18fr;gap:14px;align-items:end;margin-top:14px}.panel h4{margin:0}.subhead{font-size:10px;color:#435067}.trash{background:#ff8ca4;color:white;border-radius:5px;width:17px;height:17px;text-align:center;padding-top:2px}.btn{border:0;border-radius:7px;background:#3c8ef7;color:#fff;font-weight:700;padding:9px 16px;font-size:11px}.tiny{padding:8px 12px;font-size:10px;margin-top:12px}.alloc{display:grid;grid-template-columns:44px 108px 150px 108px 146px 1.18fr;gap:13px;align-items:end;margin-top:13px}.status{background:#ce2a9b;color:white;border-radius:7px;padding:9px 12px}.link{color:#3285f1}.bottom{border-top:1px solid #e7eaf0;height:60px;padding:16px 18px;text-align:right}.close{background:#e1e6ef;color:#455269}@media(max-width:980px){.app{padding:15px}.content{grid-template-columns:1fr}.form{margin:16px 0 0;border-left:0;padding-left:0}.grid{grid-template-columns:1fr}.four{grid-template-columns:1fr 1fr}.field{grid-template-columns:150px 1fr}.alloc{grid-template-columns:30px 1fr 1fr}.vatgrid{grid-template-columns:30px 1fr 1fr}.modal{min-height:0}.pdf-preview{height:390px}}
   </style><script>document.addEventListener('DOMContentLoaded',()=>{const field=label=>[...document.querySelectorAll('.field')].find(item=>item.querySelector('label')?.textContent.includes(label))?.querySelector('.input,.select'),keepHighlighted=()=>setTimeout(()=>{field('Supplier')?.classList.add('ai-filled');field('PO Number')?.classList.add('ai-filled');const totalVat=document.querySelector('.four label:nth-child(3) input');if(totalVat){totalVat.value='210.00';totalVat.closest('.input').classList.add('ai-filled')}},3400);fileInput.addEventListener('change',event=>{if(event.target.files[0]?.type==='application/pdf')keepHighlighted()});drop.addEventListener('drop',event=>{if(event.dataTransfer.files[0]?.type==='application/pdf')keepHighlighted()})});</script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const supplierPurchaseOrders = {
+        'XYZ Shipping Agency': ['PO-1234'],
+        'North Sea Marine Services': ['PO-2001', 'PO-2011', 'PO-2021', 'PO-2031'],
+        'Delta Offshore Supplies': ['PO-2002', 'PO-2012', 'PO-2022', 'PO-2032'],
+        'Harbor Logistics BV': ['PO-2003', 'PO-2013', 'PO-2023', 'PO-2033'],
+        'Oceanic Fuel Traders': ['PO-2004', 'PO-2014', 'PO-2024', 'PO-2034'],
+        'Seaway Catering Ltd': ['PO-2005', 'PO-2015', 'PO-2025', 'PO-2035'],
+        'Portside Engineering': ['PO-2006', 'PO-2016', 'PO-2026', 'PO-2036'],
+        'Maritime Safety Solutions': ['PO-2007', 'PO-2017', 'PO-2027', 'PO-2037'],
+        'Bluewave Transport': ['PO-2008', 'PO-2018', 'PO-2028', 'PO-2038'],
+        'Atlantic Vessel Repairs': ['PO-2009', 'PO-2019', 'PO-2029', 'PO-2039'],
+        'Coastal Equipment Hire': ['PO-2010', 'PO-2020', 'PO-2030', 'PO-2040'],
+      };
+      const getField = (label) => [...document.querySelectorAll('.field')]
+        .find((item) => item.querySelector('label')?.textContent.includes(label));
+      const readValue = (field) => field?.querySelector('select, input')?.value
+        || field?.querySelector('.input, .select')?.textContent.replace(/[×⌄]/g, '').trim() || '';
+      const select = (values, value, placeholder) => {
+        const control = document.createElement('select');
+        control.className = 'select input data-source-control';
+        control.append(new Option(placeholder, ''));
+        values.forEach((item) => control.append(new Option(item, item, false, item === value)));
+        return control;
+      };
+      const input = (type, value = '') => {
+        const control = document.createElement('input');
+        control.className = 'input data-source-control'; control.type = type; control.value = value;
+        return control;
+      };
+      const replace = (field, control) => {
+        field?.querySelector('.input, .select')?.replaceWith(control);
+        return control;
+      };
+      const applyControls = () => {
+        const documentType = getField('Document Type');
+        const supplier = getField('Supplier');
+        const poNumber = getField('PO Number');
+        const invoice = getField('Invoice/Receipt No.');
+        const cardHolder = getField('Card Holder');
+        const transactionDate = getField('Doc./Transaction Date');
+        const dueDate = getField('Due Date');
+        const selectedSupplierValue = readValue(supplier);
+        const existingSupplier = Object.keys(supplierPurchaseOrders).find(
+          (supplierName) => selectedSupplierValue === supplierName || selectedSupplierValue.startsWith(`${supplierName} /`),
+        ) || '';
+        const existingPo = readValue(poNumber);
+        const extracted = !document.querySelector('.extraction-result')?.hidden;
+        const supplierOptions = [...Object.keys(supplierPurchaseOrders), 'Unlisted Supplier (Validation Test)'];
+        replace(documentType, select(['Purchase Invoice'], readValue(documentType), 'Select document type'));
+        const supplierControl = replace(supplier, select(supplierOptions, existingSupplier, 'Select supplier'));
+        const poControl = replace(poNumber, select([], existingPo, 'Select PO number'));
+        const updatePurchaseOrders = () => {
+          const orders = supplierPurchaseOrders[supplierControl.value] || [];
+          const selectedPo = orders.includes(existingPo) ? existingPo : '';
+          poControl.replaceChildren(new Option('Select PO number', ''));
+          orders.forEach((order) => poControl.append(new Option(order, order, false, order === selectedPo)));
+          poControl.disabled = orders.length === 0;
+        };
+        supplierControl.addEventListener('change', updatePurchaseOrders);
+        updatePurchaseOrders();
+        replace(invoice, input('text', extracted ? 'INV-2026-0286' : readValue(invoice)));
+        replace(cardHolder, input('text', readValue(cardHolder)));
+        replace(transactionDate, input('date', extracted ? '2026-08-25' : ''));
+        replace(dueDate, input('date', extracted ? '2026-09-24' : ''));
+        const vat = document.querySelector('.vatgrid .select');
+        const vatControl = vat ? select(['0%', '6%', '21%'], extracted ? '21%' : '', 'Select VAT') : null;
+        if (vat && vatControl) vat.replaceWith(vatControl);
+        if (extracted) {
+          const invoiceControl = invoice?.querySelector('.input');
+          const validationControls = [
+            supplierControl,
+            poControl,
+            transactionDate?.querySelector('.input'),
+            dueDate?.querySelector('.input'),
+          ].filter(Boolean);
+          const hasValidationError = document.body.dataset.validationScenario === 'error';
+          validationControls.forEach((control) => {
+            control.classList.remove(hasValidationError ? 'ai-filled' : 'validation-error');
+            control.classList.add(hasValidationError ? 'validation-error' : 'ai-filled');
+          });
+          if (invoiceControl) {
+            invoiceControl.classList.remove('validation-error');
+            invoiceControl.classList.add('ai-filled');
+          }
+          vatControl?.classList.add('ai-filled');
+        }
+      };
+      setTimeout(applyControls, 0);
+      document.querySelector('#pdfFile')?.addEventListener('change', () => setTimeout(applyControls, 3600));
+      document.querySelector('#dropZone')?.addEventListener('drop', () => setTimeout(applyControls, 3600));
+    });
+  </script>
+  <style>.data-source-control.select{height:38px;padding:0 38px 0 12px!important;line-height:36px;vertical-align:middle}.data-source-control.select option{line-height:normal}</style>
+  <script>document.addEventListener('change',(event)=>{const field=event.target.closest('.field');if(!field?.querySelector('label')?.textContent.includes('Supplier'))return;if(event.target.value==='Unlisted Supplier (Validation Test)'){document.body.dataset.validationScenario='error'}else{delete document.body.dataset.validationScenario}});</script>
   <style>
     .ai-modal{position:fixed;inset:0;z-index:50;background:#17203380;display:grid;place-items:center;padding:20px}.ai-dialog{width:min(450px,100%);background:#fff;border-radius:12px;box-shadow:0 20px 50px #17203355;padding:27px}.ai-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:11px;background:#eaf3ff;color:#358af8;font-size:22px}.ai-dialog h2{margin:16px 0 6px;color:#263a59;font-size:17px}.ai-dialog p{color:#65748a;line-height:1.5;margin:0 0 20px}.progress-track{height:8px;background:#e9eef4;border-radius:10px;overflow:hidden}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#3b8df8,#60b4ff);border-radius:inherit;transition:width .35s ease}.progress-meta{display:flex;justify-content:space-between;margin-top:9px;color:#5c6b80;font-size:11px}.ai-filled{border-color:#64adff!important;background:#f1f8ff!important;box-shadow:0 0 0 3px #dceeff;transition:.35s}.extraction-tag{display:inline-block;margin-left:7px;padding:3px 6px;border-radius:10px;background:#e7f5ea;color:#31874b;font-size:9px;font-weight:700}
   </style>
